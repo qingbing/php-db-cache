@@ -1,0 +1,30 @@
+{
+    "name": "qingbing/php-db-cache",
+    "description": "pf框架组件——'db-cache'：database缓存的相关解析和操作",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "db",
+        "cache",
+        "db-cache"
+    ],
+    "homepage": "http://www.phpcorner.net",
+    "authors": [
+        {
+            "name": "qingbing",
+            "email": "780042175@qq.com"
+        }
+    ],
+    "require": {
+        "qingbing/php-helper": ">=1.0, <2.0",
+        "qingbing/php-config": ">=1.0, <2.0",
+        "qingbing/php-database": ">=1.0, <2.0",
+        "qingbing/php-abstracts-store": ">=1.0, <2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Components\\": "src/components"
+        }
+    }
+}
