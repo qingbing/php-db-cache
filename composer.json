@@ -1,6 +1,6 @@
 {
     "name": "qingbing/php-db-cache",
-    "description": "pf框架组件——'db-cache'：database缓存的相关解析和操作",
+    "description": "database的缓存操作",
     "type": "library",
     "license": "MIT",
     "keywords": [
