@@ -94,7 +94,7 @@ class DbCache extends Store
         if (false === ($record = $this->getById($id))) {
             return null;
         }
-        if (strtotime($record['expire_time']) < time()) {
+        if (strtotime($record['expire_at']) < time()) {
             return false;
         }
         return $record['data'];
@@ -119,8 +119,7 @@ class DbCache extends Store
                     'id' => $id,
                     'namespace' => $this->namespace,
                     'data' => $value,
-                    'expire_time' => Format::datetime(time() + $ttl),
-                    'update_time' => Format::datetime(time()),
+                    'expire_at' => Format::datetime(time() + $ttl),
                 ])
                 ->execute();
         } else {
@@ -130,8 +129,7 @@ class DbCache extends Store
                 ->setColumns([
                     'namespace' => $this->namespace,
                     'data' => $value,
-                    'expire_time' => Format::datetime(time() + $ttl),
-                    'update_time' => Format::datetime(time()),
+                    'expire_at' => Format::datetime(time() + $ttl),
                 ])
                 ->setWhere('`id`=:id', [
                     'id' => $id,

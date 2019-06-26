@@ -15,5 +15,5 @@ return [
 //    'prefix' => 'pf_',
 //    'dbConfigFile' => 'database',
 //    'dbConfigGroup' => 'master',
-    'tableName' => '{{cache}}',
+    'tableName' => 'test_cache',
 ];
